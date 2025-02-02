@@ -5,6 +5,24 @@ body {
     background-color: #f0f0f0;
 }
 
+nav {
+    background-color: #333;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+}
+
+.nav-link:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
 h1 {
     color: #333;
 }
