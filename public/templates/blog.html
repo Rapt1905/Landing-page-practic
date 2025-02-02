@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - Part-Time YouTuber Academy</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/blog.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="/logo.png" alt="Part-Time YouTuber Academy Logo">
+                <span>PART-TIME<br>YOUTUBER<br>ACADEMY</span>
+            </div>
+            <nav class="main-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/academy" class="nav-link">Academy</a>
+                <a href="/blog" class="nav-link">Blog</a>
+                <a href="/login" class="nav-link login-link">Course Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-post">
+            <header class="blog-header">
+                <h1>{{title}}</h1>
+                <div class="blog-meta">
+                    <time datetime="{{date}}">{{formatDate date}}</time>
+                    <span class="author">{{author}}</span>
+                </div>
+                {{#if featuredImage}}
+                <img class="featured-image" src="{{featuredImage}}" alt="{{title}}">
+                {{/if}}
+            </header>
+            <div class="blog-body">
+                {{{content}}}
+            </div>
+        </article>
+    </main>
+
+    <footer class="blog-footer">
+        <div class="footer-content">
+            <p>© {{currentYear}} Part-Time YouTuber Academy. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

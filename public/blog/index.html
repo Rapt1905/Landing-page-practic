@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Part-Time YouTuber Academy</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/blog.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="/logo.png" alt="Part-Time YouTuber Academy Logo">
+                <span>PART-TIME<br>YOUTUBER<br>ACADEMY</span>
+            </div>
+            <nav class="main-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/academy" class="nav-link">Academy</a>
+                <a href="/blog" class="nav-link active">Blog</a>
+                <a href="/login" class="nav-link login-link">Course Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <h1>Latest Posts</h1>
+        <div class="blog-grid">
+            {{#each posts}}
+            <article class="blog-card">
+                {{#if featuredImage}}
+                <img src="{{featuredImage}}" alt="{{title}}">
+                {{/if}}
+                <div class="blog-card-content">
+                    <h2><a href="{{url}}">{{title}}</a></h2>
+                    <time datetime="{{date}}">{{formatDate date}}</time>
+                    <p>{{excerpt}}</p>
+                </div>
+            </article>
+            {{/each}}
+        </div>
+    </main>
+</body>
+</html> 
