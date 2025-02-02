@@ -1,28 +1,114 @@
-body {
-    font-family: Arial, sans-serif;
+:root {
+    --primary-blue: #0066FF;
+    --light-blue: #66B2FF;
+}
+
+* {
     margin: 0;
-    padding: 20px;
-    background-color: #f0f0f0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logo span {
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 1.2;
 }
 
 nav {
-    background-color: #333;
-    padding: 1rem;
-    margin-bottom: 2rem;
+    display: flex;
+    gap: 2rem;
 }
 
 .nav-link {
-    color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    margin-right: 1rem;
+    color: #333;
+    font-weight: 500;
 }
 
-.nav-link:hover {
-    background-color: #555;
-    border-radius: 4px;
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 h1 {
-    color: #333;
+    font-size: 3rem;
+    color: #1a1a3f;
+    margin-bottom: 2rem;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, var(--primary-blue), var(--light-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 4rem;
+}
+
+.hero-text {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    color: #8B5CF6;
+}
+
+.subtext {
+    font-size: 1.25rem;
+    color: #4B5563;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #1a1a3f;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2a2a5f;
+}
+
+@media (max-width: 768px) {
+    h1, .gradient-text {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text {
+        font-size: 1.25rem;
+    }
+    
+    .subtext {
+        font-size: 1rem;
+    }
 }
